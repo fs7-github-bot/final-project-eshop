@@ -11,7 +11,8 @@ public class EshopApplicationTests {
 
 	@Test
 	public void contextLoads() {
-//		Assert.assertTrue(true, true);
+		int i = 1;
+		Assert.assertEquals("isTrue", 1, i);
 	}
 
 }
