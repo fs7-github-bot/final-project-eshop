@@ -12,7 +12,7 @@ public class EshopApplicationTests {
 	@Test
 	public void contextLoads() {
 		int i = 1;
-		assertEquals("isTrue", 1, i);
+//		assertEquals("isTrue", 1, i);
 	}
 
 }
