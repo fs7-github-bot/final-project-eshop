@@ -5,7 +5,7 @@ jdk:
 
 addons:
   sonarcloud:
-    organization: "fs7-final-project"
+    organization: "fs7-githubbot-organization"
     token:
       secure: "Rdn0mlRXP6eSlAPOCYzd+AAD+PYXRJ+bcpvZ6RZJ6SV7s9v0+fuaavVtkR4x6cbn7JOthQSUMbVF0N2POy1AsITv0NE2KUt/NeQetpZyx92qDeeTGR6p8mdDqrKd5u0cpjTnVgqahC+rkiYvMogdxuFjjLVd1gG9xcbD2uMi3KmYA7d4SJAfykeEDR49cAmwTU+6TE8f9qwydOJdijqsjEJzFZKwhcyCHiryy6XrywlFHY4dWHEx5+H8v/70tzGEovmC7HaNWt/Ui8v2IuN9m6QofZNzshwCsPJlK2rMm6fl7hJ0wm9NSugxqI8eE+2Z17IzDRjcMGZ26ghkTyb16WumcOVu2hRkBllephdLkwWahrBTNqDFZNmE8851MAT4+eQBfXuqCIMiYs7IjnsMW/qqmwbiSDjC5P7Jk/j1TFKzfvSizFDxOh5tUdapYqpnGEs0C5JtDsv6u5DSd9ZopXL489A/WHnvVPWY/SwCBLmVeSOB5MA5qg7Y+Dm1+zEG6ATREw+FJ9EAQ+dz+yok71E+jHJSelHI2HZmJSdwSA0Az8ZnJT1Fxui0FhFbNDYS6ImiTmvor7hyJ0BKhidSeBP+M5Ymr0a5f4hRbJzOCoqiIM7zGhDGoUuA9Na1KT88tkbQ3LHXyA9C30h0IzLImiMgBmkJje7EZ+QdiDBAmpk="
       
@@ -19,6 +19,9 @@ script:
   #- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=fs7-final-project
   #- mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=fs7-final-project
   #- mvn clean verify sonar:sonar
-  - mvn clean test
+  #- mvn clean test
   #- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=fs7-final-project
   #
+  # - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.projectKey=fs7-final-project-clone -Dsonar.organization=fs7-githubbot-organization -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=efe1a6e207a737a518d782cc3a097aa417301cfe
+
