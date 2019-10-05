@@ -24,4 +24,4 @@ script:
   #
   # - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.projectKey=fs7-final-project-clone -Dsonar.organization=fs7-githubbot-organization -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=efe1a6e207a737a518d782cc3a097aa417301cfe
-
+  - mvn clean test jacoco:report coveralls:report
